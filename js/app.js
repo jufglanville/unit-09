@@ -1,3 +1,5 @@
+let width = screen.width;
+
 // Hamburger Menu Functions
 
 /* Set the width of the sidebar to 250px (show it) */
@@ -10,10 +12,7 @@ function closeNav() {
     document.getElementById("mySidepanel").style.width = "0";
 }
 
-// Hamburger Menu Finish
-/////////////////////////
-
-let width = screen.width;
+// ScrollMagic Functions
 
 // let tl = new TimelineMax({onUpdate:updatePercentage});
 let tl = new TimelineMax();
@@ -107,7 +106,8 @@ const scene5 = new ScrollMagic.Scene({
 
 
 
-// Project Carousel Function
+// Project Carousel Functions
+
 $(document).ready(function() {
     $('.jR3DCarouselGalleryCustom').jR3DCarousel({
         width: 700,
@@ -125,15 +125,3 @@ $(document).ready(function() {
         console.log("Slide shown: "+$slide.find('img').attr('src'));
     }
 });
-
-// // Project Modals
-
-// $('.project-collection').hover(function(){
-//     $(this).css("background-color", "yellow");
-//     }, function(){
-//     $(this).css("background-color", "pink");
-//   });
-
-// $(document).ready(function(){
-//     $(".owl-carousel").owlCarousel();
-//   });
