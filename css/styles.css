@@ -330,7 +330,31 @@ a, a:visited, a:hover, a:active {
 /* ------- End of Timeline Section -------- */
 /* ---------------------------------------- */
 
+/* ---------------------------------------- */
+/* ------------ Contact Section ----------- */
+/* ---------------------------------------- */
 
+#contact {
+    position: fixed;
+    z-index: 4;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 40px 15px;
+    background-image: linear-gradient(to top, #f77062 0%, #fe5196 100%);
+}
+
+/* ---------------------------------------- */
+/* ------- End of Contact Section --------- */
+/* ---------------------------------------- */
+
+.end {
+    position: relative;
+    top: 100vh;
+}
 /* ---------------------------------------- */
 /* -------------- Typography -------------- */
 /* ---------------------------------------- */
@@ -370,6 +394,10 @@ h2 {
 .trigger-4 {
     position: absolute;
     top: 75%;
+}
+.trigger-5 {
+    position: absolute;
+    top: 95%;
 }
 
 /* All sections have a 100% screen size height */

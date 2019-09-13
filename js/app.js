@@ -13,27 +13,31 @@ function closeNav() {
 // Hamburger Menu Finish
 /////////////////////////
 
+let width = screen.width;
 
 // let tl = new TimelineMax({onUpdate:updatePercentage});
 let tl = new TimelineMax();
 let tl2 = new TimelineMax();
 let tl3 = new TimelineMax();
 let tl4 = new TimelineMax();
+let tl5 = new TimelineMax();
 const controller = new ScrollMagic.Controller();
 
 tl.from('.main-background-text', 1, {opacity: 0, y: -200});
 tl.from('.icons', 1.5, {opacity: 0, scale: 0});
 tl.from('.logo', 1.5, {opacity: 0, scale: 0}, 0);
 
-tl2.from('#about', 0.5, {opacity: 0, x: 400});
-tl2.from('.profile-img', 1, {opacity: 0, x: -400}, 0.5);
-tl2.from('.intro-text', 1, {opacity: 0, x: 400}, 0.5);
-tl2.from('.left', 1.5, {opacity: 0, y: 400}, 1.5);
-tl2.from('.right', 1.5, {opacity: 0, y: -400}, 1.5);
+tl2.from('#about', 0.5, {opacity: 0, x: width});
+tl2.from('.profile-img', 1, {opacity: 0, x: -width}, 0.5);
+tl2.from('.intro-text', 1, {opacity: 0, x: width}, 0.5);
+tl2.from('.left', 1.5, {opacity: 0, y: width}, 1.5);
+tl2.from('.right', 1.5, {opacity: 0, y: -width}, 1.5);
 
-tl3.from('#projects', 1, {opacity: 0, x: -400});
+tl3.from('#projects', 1, {opacity: 0, x: -width});
 
-tl4.from('#timeline', 1, {opacity: 0, x: -400});
+tl4.from('#timeline', 1, {opacity: 0, x: width});
+
+tl5.from('#contact', 1, {opacity: 0, x: -width});
 
 // tl.from('.intro', 1.5, {opacity: 0});
 // tl.from('.profile-img', 2, {y: -300, opacity: 0});
@@ -90,6 +94,14 @@ const scene4 = new ScrollMagic.Scene({
 })
 .addIndicators()
 .setTween(tl4)
+.addTo(controller);
+
+const scene5 = new ScrollMagic.Scene({
+    triggerElement: ".trigger-5",
+    triggerHook: "0"
+})
+.addIndicators()
+.setTween(tl5)
 .addTo(controller);
 
 
