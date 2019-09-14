@@ -227,18 +227,18 @@ body {
 }
 
 #projects p {
-    margin: 0;
+    margin: 10px;
 }
-.jR3DCarouselGallery {
+
+/* .jR3DCarouselGallery {
     z-index: 100;
     width: 90%;
-}
+} */
 
 /* Carousel */
 .jR3DCarouselGalleryCustom {
-    margin: auto;
+    margin: auto;			
 }
-  
 .jR3DCarouselGalleryCustom .captions {
     position: relative;
     padding: 5px 0;
@@ -326,6 +326,79 @@ a, a:visited, a:hover, a:active {
     background-image: linear-gradient(to top, #7028e4 0%, #e5b2ca 100%);
 }
 
+.date {
+    display: flex;
+    justify-content: center;
+    font-size: 5em;
+}
+
+.date p {
+    margin: 20px 0;
+}
+
+.date h3 {
+    margin-right: 10px;
+}
+
+.year-container {
+    width: 82px;
+}
+
+.year {
+    position: absolute;
+
+}
+
+.timeline-img {
+    width: 30%;
+    margin: 5%;
+}
+
+#hat {
+    position: absolute;
+    z-index: 5;
+    margin-left: 22%;
+    margin-top: 14%;
+    width: 15%;
+}
+
+.lights {
+    position: absolute;
+    width: 40%;
+    animation: light-effect 1s infinite ease-in-out;
+}
+@-webkit-keyframes light-effect{
+    0%{
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+
+}
+
+#blue,
+#yellow {
+    width: 60%;
+}
+
+#yellow {
+    left: -10%;
+    animation-delay: 0.5s;
+}
+#red {
+    left: 20%;
+    animation-delay: 0.3s;
+}
+#blue {
+    right: -10%;
+    animation-delay: 0.7s;
+}
+#green {
+    right: 20%;
+    animation-delay: 1s;
+}
+
 /* ---------------------------------------- */
 /* ------- End of Timeline Section -------- */
 /* ---------------------------------------- */
@@ -353,13 +426,15 @@ a, a:visited, a:hover, a:active {
 
 .end {
     position: relative;
-    top: 100vh;
+    top: 200vh;
 }
 /* ---------------------------------------- */
 /* -------------- Typography -------------- */
 /* ---------------------------------------- */
 .intro-text,
-#projects {
+#projects,
+#timeline,
+#contact {
     text-align: center;
     font-family: 'Source Sans Pro', sans-serif;
     letter-spacing: 0.1em;
@@ -385,19 +460,23 @@ h2 {
 }
 .trigger-2 {
     position: absolute;
-    top: 25%;
+    top: 30%;
 }
 .trigger-3 {
     position: absolute;
-    top: 50%;
+    top: 60%;
 }
 .trigger-4 {
     position: absolute;
-    top: 75%;
+    top: 90%;
+}
+.trigger-date {
+    position: absolute;
+    top: 100%;
 }
 .trigger-5 {
     position: absolute;
-    top: 95%;
+    top: 200%;
 }
 
 /* All sections have a 100% screen size height */
@@ -544,6 +623,10 @@ h1 {
 @media only screen and (min-width: 992px) {
     .main-background-text {
         font-size: 2em;
+    }
+    #hat {
+        margin-left: 24%;
+        margin-top: 15%;
     }
 }
 

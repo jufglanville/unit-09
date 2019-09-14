@@ -19,10 +19,13 @@ let tl = new TimelineMax();
 let tl2 = new TimelineMax();
 let tl3 = new TimelineMax();
 let tl4 = new TimelineMax();
+
+let td1 = new TimelineMax({onUpdate:updatePercentage});
+
 let tl5 = new TimelineMax();
 const controller = new ScrollMagic.Controller();
 
-tl.from('.main-background-text', 1, {opacity: 0, y: -200});
+tl.from('.main-background-text', 1, {opacity: 0, y: 200});
 tl.from('.icons', 1.5, {opacity: 0, scale: 0});
 tl.from('.logo', 1.5, {opacity: 0, scale: 0}, 0);
 
@@ -37,6 +40,44 @@ tl3.from('#projects', 1, {opacity: 0, x: -width});
 tl4.from('#timeline', 1, {opacity: 0, x: width});
 
 tl5.from('#contact', 1, {opacity: 0, x: -width});
+
+td1.from('#year-10', 0.5, {opacity: 0, y: 50});
+
+td1.from('#guitar', 1.5, {opacity: 0, x: -width}, 0);
+td1.from('#acm', 1.5, {opacity: 0, x: width}, 0);
+
+
+td1.to('#year-10', 0.5, {opacity: 0, y: -60});
+td1.from('#year-11', 0.5, {opacity: 0, y: 50});
+td1.to('#year-11', 0.5, {opacity: 0, y: -60});
+td1.from('.lights', 1, {scale: 0}, 2);
+td1.from('#year-12', 0.5, {opacity: 0, y: 50});
+td1.to('#year-12', 0.5, {opacity: 0, y: -60});
+td1.from('#year-13', 0.5, {opacity: 0, y: 50});
+td1.to('#year-13', 0.5, {opacity: 0, y: -60});
+
+td1.from('#year-14', 0.5, {opacity: 0, y: 50});
+td1.from('#hat', 0.5, {opacity: 0, y: -60}, 5);
+td1.from('#diploma', 0.5, {opacity: 0, scale: 0}, 5)
+
+td1.to('#year-14', 0.5, {opacity: 0, y: -60});
+td1.to('#guitar', 1.5, {opacity: 0, x: width});
+td1.to('#acm', 1.5, {opacity: 0, x: -width}, 6);
+td1.to('#hat', 0.5, {opacity: 0, scale: 0}, 6);
+td1.to('#diploma', 0.5, {opacity: 0, scale: 3}, 6);
+td1.to('.lights', 1, {scale: 0}, 6);
+
+td1.from('#year-15', 1.5, {opacity: 0, y: 50}, 6.5);
+td1.to('#year-15', 0.5, {opacity: 0, y: -60});
+td1.from('#year-16', 0.5, {opacity: 0, y: 50});
+td1.to('#year-16', 0.5, {opacity: 0, y: -60});
+td1.from('#year-17', 0.5, {opacity: 0, y: 50});
+td1.to('#year-17', 0.5, {opacity: 0, y: -60});
+td1.from('#year-18', 0.5, {opacity: 0, y: 50});
+td1.to('#year-18', 0.5, {opacity: 0, y: -60});
+td1.from('#year-19', 0.5, {opacity: 0, y: 50});
+
+
 
 // tl.from('.intro', 1.5, {opacity: 0});
 // tl.from('.profile-img', 2, {y: -300, opacity: 0});
@@ -54,7 +95,7 @@ const scene1 = new ScrollMagic.Scene({
     triggerHook: "0"
 })
 .addIndicators()
-.setPin(".main-background")
+.setPin(".main-background-text")
 .setTween(tl)
 .addTo(controller);
 
@@ -103,8 +144,21 @@ const scene5 = new ScrollMagic.Scene({
 .setTween(tl5)
 .addTo(controller);
 
+const timelineScene = new ScrollMagic.Scene({
+    triggerElement: ".trigger-date",
+    triggerHook: "0",
+    duration: "90%"
+})
+.setPin(".trigger-date")
+.addIndicators()
+.setTween(td1)
+.addTo(controller);
 
-
+function updatePercentage() {
+    //percent.innerHTML = (tl.progress() *100 ).toFixed();
+    td1.progress();
+    console.log(tl.progress());
+}
 
 // Project Carousel Functions
 
@@ -118,10 +172,8 @@ $(document).ready(function() {
         animationDuration: 1600,
         animationInterval: 1500,
         slideClass: 'jR3DCarouselCustomSlide',
-        autoplay: false,
-        onSlideShow: slideShownCallback
+        autoplay: true
+        // onSlideShow: slideShownCallback
     });
-    function slideShownCallback($slide) {
-        console.log("Slide shown: "+$slide.find('img').attr('src'));
-    }
 });
+
