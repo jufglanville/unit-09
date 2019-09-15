@@ -334,6 +334,7 @@ a, a:visited, a:hover, a:active {
 
 .date p {
     margin: 20px 0;
+    z-index: 5;
 }
 
 .date h3 {
@@ -348,22 +349,40 @@ a, a:visited, a:hover, a:active {
     position: absolute;
 
 }
+.timeline-img-container {
+    margin-top: 20px;
+}
 
 .timeline-img {
     width: 30%;
     margin: 5%;
+    position: absolute;
+}
+
+#acm {
+    left: 10%;
+    margin-top: 15%;
+    z-index: 3;
+}
+#guitar {
+    z-index: 3;
 }
 
 #hat {
-    position: absolute;
     z-index: 5;
-    margin-left: 22%;
-    margin-top: 14%;
-    width: 15%;
+    width: 18%;
+    left: 28%;
+    margin-top: 7%;
+}
+
+#diploma {
+    margin-top: 45%;
+    left: 25%;
+    width: 40%;
 }
 
 .lights {
-    position: absolute;
+    transform: translate(0, -40px);
     width: 40%;
     animation: light-effect 1s infinite ease-in-out;
 }
@@ -399,6 +418,72 @@ a, a:visited, a:hover, a:active {
     animation-delay: 1s;
 }
 
+#rainbow {
+    width: 60%;
+    left: 15%;
+    margin-top: 25%;
+}
+
+#gold {
+    margin-top: 49%;
+    width: 20%;
+    left: 56%;
+}
+
+#clover {
+    width: 25%;
+    left: 4%;
+    margin-top: 40%;
+}
+
+#plane {
+    right: -40vw;
+}
+
+#flag {
+    left: 30%;
+    margin-top: 0;
+}
+
+#stc {
+    left: 1%;
+    width: 50%;
+    top: 35%;
+}
+#wax {
+    width: 50%;
+    left: 20%;
+    top: 55%;
+}
+#rock {
+    width: 50%;
+    top: 32%;
+    left: 42%;
+}
+
+#boat {
+    width: 40%;
+    right: -50%;
+}
+#england {
+    width: 40%;
+    top: 50%;
+    left: 25%;
+}
+
+#vw,
+#paycircle,
+#treehouse {
+    width: 60%;
+    left: 15%;
+    top: 45%;
+}
+
+#paycircle,
+#treehouse {
+    top: 40%;
+}
+
 /* ---------------------------------------- */
 /* ------- End of Timeline Section -------- */
 /* ---------------------------------------- */
@@ -418,6 +503,27 @@ a, a:visited, a:hover, a:active {
     flex-direction: column;
     padding: 40px 15px;
     background-image: linear-gradient(to top, #f77062 0%, #fe5196 100%);
+}
+
+#email-2 {
+    position: absolute;
+    top: 35%;
+    left: 31%;
+}
+#email-2 img {
+    width: 120px;
+    transition: all 0.5s;
+}
+#email-2 img:hover,
+.cv-img:hover {
+    transform: scale(1.2);
+}
+.email-container {
+    margin-bottom: 35%;
+}
+.cv-img {
+    width: 90px;
+    transition: all 0.5s;
 }
 
 /* ---------------------------------------- */
