@@ -69,7 +69,7 @@ footer{
     height: 75px;
 }
 .logo {
-    width: 50px;
+    width: 60px;
     margin: auto 5px;
 }
 
@@ -233,11 +233,9 @@ body {
     margin: 10px;
 }
 
-
-/* .jR3DCarouselGallery {
-    z-index: 100;
-    width: 90%;
-} */
+.project-collection {
+    margin: auto 0;
+}
 
 /* Carousel */
 .jR3DCarouselGalleryCustom {
@@ -734,7 +732,9 @@ h1 {
 
 /* Tablet Screen */
 @media only screen and (min-width: 768px) {
-
+    .logo {
+        width: 70px;
+    }
     .main-background-text {
         font-size: 1.8em;
     }
@@ -771,9 +771,16 @@ h1 {
     .profile-img {
         width: 220px;
     }
-    #projects p {
+    /* #projects p {
         margin-bottom: 10%;
+    } */
+    #rock {
+        left: -30%;
     }
+    #new-world {
+        left: 60%;
+    }
+
     #contact{
         padding-left: 20%;
         padding-right: 20%;
