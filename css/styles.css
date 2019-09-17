@@ -26,17 +26,20 @@ footer{
     z-index: 50;
 }
 .icons {
-    margin-top: 50px;
-    padding: 0 10px;
+    align-self: flex-end;
     width: 30%;
 }
 .icons img {
-    height: 20px;
+    width: 30%;
+    max-height: 30px;
     padding: 0 5px;
     transition: all 0.5s;
 }
 .icons img:hover {
     transform: scale(1.5);
+}
+#email img {
+    width: 40%;
 }
 .scroll-icon {
     height: 80px;
@@ -230,6 +233,7 @@ body {
     margin: 10px;
 }
 
+
 /* .jR3DCarouselGallery {
     z-index: 100;
     width: 90%;
@@ -326,6 +330,7 @@ a, a:visited, a:hover, a:active {
     background-image: linear-gradient(to top, #7028e4 0%, #e5b2ca 100%);
 }
 
+/*------ Date spinner ------*/
 .date {
     display: flex;
     justify-content: center;
@@ -349,61 +354,67 @@ a, a:visited, a:hover, a:active {
     position: absolute;
 
 }
+/*-- End of Date spinner --*/
+
+
 .timeline-img-container {
-    margin-top: 20px;
+    position: relative;
+    width: 90%;
+    height: calc(100vh - 260px);
+    margin: auto;
 }
 
 .timeline-img {
-    width: 30%;
-    margin: 5%;
     position: absolute;
 }
 
+/*------ Uni days ------*/
+.hat-graphic,
+.diploma-graphic {
+    position: relative;
+    width: 70%;
+    height: 50%;
+    margin: auto;
+}
 #acm {
-    left: 10%;
-    margin-top: 15%;
-    z-index: 3;
+    left: 0;
+    top: 25%;
+    width: 100%;
+}
+#hat {
+    width: 50%;
+    left: 65%;
+    top: 1%;
+}
+#notes {
+    width: 70%;
+    left: 15%;
 }
 #guitar {
-    z-index: 3;
+    width: 80%;
+    left: 10%;
 }
-
-#hat {
-    z-index: 5;
-    width: 18%;
-    left: 28%;
-    margin-top: 7%;
+#electric-guitar {
+    width: 90%;    
+    left: 5%;
 }
-
+#band {
+    width: 100%;
+    margin-top: -10%;
+    left: 0;
+}
 #diploma {
-    margin-top: 45%;
-    left: 25%;
-    width: 40%;
+    width: 120%;
+    left: -10%;
 }
-
 .lights {
-    transform: translate(0, -40px);
-    width: 40%;
+    width: 60%;
     animation: light-effect 1s infinite ease-in-out;
 }
-@-webkit-keyframes light-effect{
-    0%{
-        opacity: 0;
-    }
-    50% {
-        opacity: 1;
-    }
-
-}
-
-#blue,
-#yellow {
-    width: 60%;
-}
-
 #yellow {
     left: -10%;
     animation-delay: 0.5s;
+    width: 100%;
 }
 #red {
     left: 20%;
@@ -412,76 +423,89 @@ a, a:visited, a:hover, a:active {
 #blue {
     right: -10%;
     animation-delay: 0.7s;
+    width: 100%;
 }
 #green {
     right: 20%;
     animation-delay: 1s;
+} 
+@-webkit-keyframes light-effect{
+    0%{
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
 }
+/*---- End of Uni days ----*/
 
+/*--- Ireland Days ---*/
 #rainbow {
-    width: 60%;
-    left: 15%;
-    margin-top: 25%;
+    width: 140%;
+    left: -20%;
+    top: -10%;
 }
-
 #gold {
-    margin-top: 49%;
-    width: 20%;
-    left: 56%;
-}
-
-#clover {
-    width: 25%;
-    left: 4%;
-    margin-top: 40%;
-}
-
-#plane {
-    right: -40vw;
-}
-
-#flag {
-    left: 30%;
-    margin-top: 0;
-}
-
-#stc {
-    left: 1%;
-    width: 50%;
-    top: 35%;
-}
-#wax {
-    width: 50%;
-    left: 20%;
-    top: 55%;
-}
-#rock {
-    width: 50%;
-    top: 32%;
-    left: 42%;
-}
-
-#boat {
-    width: 40%;
-    right: -50%;
-}
-#england {
-    width: 40%;
     top: 50%;
-    left: 25%;
+    width: 50%;
+    left: 75%;
 }
-
-#vw,
-#paycircle,
-#treehouse {
-    width: 60%;
-    left: 15%;
+#clover {
+    width: 50%;
+    left: -25%;
     top: 45%;
 }
+#plane {
+    width: 100%;
+    left: 80vw;
+}
+#flag {
+    width: 90%;
+    left: 5%;
+}
 
+#rock {
+    left: -10%;
+    width: 70%;
+    z-index: 1;
+}
+#wax {
+    width: 70%;
+    left: 15%;
+    top: 40%;
+    z-index: 1;
+}
+#new-world {
+    width: 70%;
+    left: 40%;
+    z-index: 1;
+}
+#stc {
+    width: 100%;
+    z-index: 1;
+}
+/*-- End of Ireland Days --*/
+
+/*--- Back to England ---*/
+#boat {
+    width: 90%;
+    left: -80vw;
+}
+#england {
+    width: 90%;
+    top: 20%;
+    left: 5%;
+}
+#vw {
+    width: 100%;
+    left: 0;
+    top: 15%;
+}
 #paycircle,
 #treehouse {
-    top: 40%;
+    width: 100%;
+    top: 5%;
+    left: 0;
 }
 
 /* ---------------------------------------- */
@@ -501,26 +525,21 @@ a, a:visited, a:hover, a:active {
     width: 100%;
     display: flex;
     flex-direction: column;
-    padding: 40px 15px;
+    padding: 40px 10%;
     background-image: linear-gradient(to top, #f77062 0%, #fe5196 100%);
 }
 
-#email-2 {
-    position: absolute;
-    top: 35%;
-    left: 31%;
-}
 #email-2 img {
     width: 120px;
     transition: all 0.5s;
+    margin-top: 5%;
+    margin-bottom: 10%;
 }
 #email-2 img:hover,
 .cv-img:hover {
     transform: scale(1.2);
 }
-.email-container {
-    margin-bottom: 35%;
-}
+
 .cv-img {
     width: 90px;
     transition: all 0.5s;
@@ -719,10 +738,26 @@ h1 {
     .main-background-text {
         font-size: 1.8em;
     }
-    .icons img {
-        height: 30px;
+    #about {
+        padding-left: 15%;
+        padding-right: 15%;
     }
-
+    .left, .right {
+        margin: 30px;
+    }
+    .skills {
+        height: 70px;
+    }
+    .profile-img {
+        width: 180px;
+    }
+    .intro-text, #projects, #timeline, #contact {
+        font-size: 1.2em;
+        line-height: 140%;
+    }
+    .timeline-img-container {
+        max-width: 450px;
+    }
 }
 
 /* Desktop */
@@ -730,13 +765,23 @@ h1 {
     .main-background-text {
         font-size: 2em;
     }
-    #hat {
-        margin-left: 24%;
-        margin-top: 15%;
+    .skills {
+        height: 90px;
     }
+    .profile-img {
+        width: 220px;
+    }
+    #projects p {
+        margin-bottom: 10%;
+    }
+    #contact{
+        padding-left: 20%;
+        padding-right: 20%;
+    }
+
 }
 
-/* Large Screen */
+/* Large Screen
 @media only screen and (min-width: 1200px) {
 
-}
+} */
