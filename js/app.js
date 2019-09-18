@@ -13,6 +13,53 @@ function closeNav() {
     document.getElementById("mySidepanel").style.width = "0";
 }
 
+// Nav Function
+
+let docHeight = $(document).height();
+let homeAnchor = 0;
+let aboutAnchor = docHeight * 0.1;
+let projectsAnchor = docHeight * 0.2;
+let timelineAnchor = docHeight * 0.3;
+let contactAnchor = docHeight;
+
+$(".home-link").click(function() {
+    closeNav(),
+    $('html, body').animate({
+        scrollTop: homeAnchor
+    }, 100);
+});
+
+$("#about-link").click(function() {
+    closeNav(),
+    $('html, body').animate({
+        scrollTop: aboutAnchor
+    }, 100);
+});
+
+$("#projects-link").click(function() {
+    closeNav(),
+    $('html, body').animate({
+        scrollTop: projectsAnchor
+    }, 100);
+});
+
+$("#timeline-link").click(function() {
+    closeNav(),
+    $('html, body').animate({
+        scrollTop: timelineAnchor
+    }, 100);
+});
+$("#contact-link").click(function() {
+    closeNav(),
+    $('html, body').animate({
+        scrollTop: contactAnchor
+    }, 100);
+});
+
+$(".closebtn").click(closeNav);
+
+$(".openbtn").click(openNav);
+
 // ScrollMagic Functions
 
 // let tl = new TimelineMax({onUpdate:updatePercentage});
@@ -172,14 +219,6 @@ const scene5 = new ScrollMagic.Scene({
 .setTween(tl5)
 .addTo(controller);
 
-// const scene6 = new ScrollMagic.Scene({
-//     triggerElement: ".trigger-5",
-//     triggerHook: "0"
-// })
-// .addIndicators()
-// .setTween(tl6)
-// .addTo(controller);
-
 const timelineScene = new ScrollMagic.Scene({
     triggerElement: ".trigger-date", 
     triggerHook: "0",
@@ -210,4 +249,7 @@ $(document).ready(function() {
         autoplay: true
     });
 });
+
+
+
 

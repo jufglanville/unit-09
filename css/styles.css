@@ -68,10 +68,18 @@ footer{
     right: 3px;
     height: 75px;
 }
+.logo-container {
+    margin: auto 5px;
+    transition: all 0.5s;
+}
+.logo-container:hover {
+    transform: scale(1.5);
+}
 .logo {
     width: 60px;
-    margin: auto 5px;
 }
+
+
 
 /* The sidepanel menu */
 .sidepanel {
@@ -525,6 +533,9 @@ a, a:visited, a:hover, a:active {
     flex-direction: column;
     padding: 40px 10%;
     background-image: linear-gradient(to top, #f77062 0%, #fe5196 100%);
+}
+#contact div {
+    margin: auto;
 }
 
 #email-2 img {

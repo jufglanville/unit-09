@@ -18,17 +18,18 @@
             <nav class="navbar">
                 <!-- Logo -->
                 <!-- <img src="img/logo.png" alt="logo" class="logo"> -->
-                <img src="img/logov4.svg" alt="logo" class="logo">
+                <a href="#" class="logo-container home-link"><img src="img/logov4.svg" alt="logo" class="logo"></a>
                 <!-- Sidebar Content -->
                 <div id="mySidepanel" class="sidepanel">
-                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                    <a href="#home">Home</a>
-                    <a href="#about">About</a>
-                    <a href="#projects">Projects</a>
-                    <a href="#contact">Contact</a>
+                    <a href="javascript:void(0)" class="closebtn">&times;</a>
+                    <a href="#" class="home-link">Home</a>
+                    <a href="#" id="about-link">About</a>
+                    <a href="#" id="projects-link">Projects</a>
+                    <a href="#" id="timeline-link">Timeline</a>
+                    <a href="#" id="contact-link">Contact</a>
                 </div>
                 <!-- Hamburger Icon -->
-                <button class="openbtn" onclick="openNav()">&#9776;</button>
+                <button class="openbtn">&#9776;</button>
             </nav>
         </header>
 
@@ -287,6 +288,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.js" integrity="sha256-31FC/OT6XpfjAhj9FuXjw5/wPXXawCAjJQ29E23/XPk=" crossorigin="anonymous"></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js'></script>
     <script src="js/jR3DCarousel.js"></script>
+    <script src="js/jquery.scrollTo.min.js"></script>
     <script src="js/app.js"></script>
 </body>
 </html>
