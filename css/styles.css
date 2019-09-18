@@ -13,7 +13,6 @@ footer {
     color: white;
     text-align: center;
     padding: 5px 10px;
-    
 }
 header{
     top: 0;
@@ -83,32 +82,38 @@ footer{
 
 /* The sidepanel menu */
 .sidepanel {
-    height: 100vh; /* Specify a height */
-    width: 0; /* 0 width - change this with JavaScript */
-    position: fixed; /* Stay in place */
-    z-index: 300; /* Stay on top */
+    height: 100vh;
+    width: 0;
+    position: fixed;
+    z-index: 300;
     top: 0;
     left: 0;
-    background-color: #111; /* Black*/
-    overflow-x: hidden; /* Disable horizontal scroll */
-    padding-top: 60px; /* Place content 60px from the top */
-    transition: 0.5s; /* 0.5 second transition effect to slide in the sidepanel */
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.5s;
 }
   
 /* The sidepanel links */
 .sidepanel a {
-    padding: 8px 8px 8px 32px;
+    padding: 8px;
     text-decoration: none;
     font-size: 25px;
-    color: #818181;
+   
     display: block;
     transition: 0.3s;
     font-family: 'Source Code Pro', monospace;
 }
+.sidepanel img {
+    position: absolute;
+    bottom: 10px;
+    left: 90px;
+    width: 70px;
+}
   
 /* When you mouse over the navigation links, change their color */
 .sidepanel a:hover {
-    color: #f1f1f1;
+    transform: scale(1.2);
 }
   
 /* Position and style the close button (top right corner) */
@@ -142,7 +147,6 @@ footer{
 
 body {
     height: calc(100vh + 10px);
-    /* height: 200vh; */
     width: 100%;
     background-image: url(../img/code.gif);
     background-repeat: repeat;
@@ -155,11 +159,7 @@ body {
 
 .main-background {
     height: calc(100vh + 10px);
-    /* height: 200vh; */
     width: 100%;
-    /* background-image: url(../img/code.gif);
-    background-repeat: repeat;
-    background-size: cover; */
 }
 
 .main-background-text {
@@ -233,7 +233,7 @@ body {
     width: 100%;
     display: flex;
     flex-direction: column;
-    padding: 40px 15px;
+    padding: 40px 15px 90px;
     background-image: linear-gradient(180deg, #2af598 0%, #009efd 100%);
 }
 
@@ -375,8 +375,8 @@ a, a:visited, a:hover, a:active {
 }
 
 /*------ Uni days ------*/
-.hat-graphic,
-.diploma-graphic {
+.top-graphic,
+.bottom-graphic {
     position: relative;
     width: 70%;
     height: 50%;
@@ -643,9 +643,6 @@ h1 {
     text-align: center;
 }
 
-
-
-
 /* ---------------------------------------- */
 /* ---------- Glitch Text Effect ---------- */
 /* ---------------------------------------- */
@@ -782,16 +779,12 @@ h1 {
     .profile-img {
         width: 220px;
     }
-    /* #projects p {
-        margin-bottom: 10%;
-    } */
     #rock {
         left: -30%;
     }
     #new-world {
         left: 60%;
     }
-
     #contact{
         padding-left: 20%;
         padding-right: 20%;

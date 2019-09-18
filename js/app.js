@@ -1,7 +1,7 @@
 let width = screen.width;
 let height = screen.height;
 let docHeight = $(document).height();
-let homeAnchor = 0;
+let homeAnchor = 10;
 let aboutAnchor = docHeight * 0.1;
 let projectsAnchor = docHeight * 0.2;
 let timelineAnchor = docHeight * 0.3;
@@ -56,27 +56,32 @@ let tl = new TimelineMax();
 let tl2 = new TimelineMax();
 let tl3 = new TimelineMax();
 let tl4 = new TimelineMax();
+let tl5 = new TimelineMax();
+let tl6 = new TimelineMax();
 
 let td1 = new TimelineMax({onUpdate:updatePercentage});
 
-let tl5 = new TimelineMax();
-let tl6 = new TimelineMax();
 const controller = new ScrollMagic.Controller();
 
+// Home Page
 tl.from('.main-background-text', 1, {opacity: 0, y: 200});
 tl.from('.icons', 1.5, {opacity: 0, scale: 0});
 tl.from('.logo', 1.5, {opacity: 0, scale: 0}, 0);
 
+// About Me Page
 tl2.from('#about', 0.5, {opacity: 0, x: width});
 tl2.from('.profile-img', 1, {opacity: 0, x: -width}, 0.5);
 tl2.from('.intro-text', 1, {opacity: 0, x: width}, 0.5);
 tl2.from('.left', 1.5, {opacity: 0, y: width}, 0.5);
 tl2.from('.right', 1.5, {opacity: 0, y: -width}, 0.5);
 
+// Projects Page
 tl3.from('#projects', 1, {opacity: 0, x: -width});
 
+// Timeline Page
 tl4.from('#timeline', 1, {opacity: 0, x: width});
 
+// Contacts Page
 tl5.from('#contact', 1, {opacity: 0, x: -width});
 
 // Timeline Trigger Points
@@ -171,7 +176,6 @@ const scene1 = new ScrollMagic.Scene({
     triggerElement: ".trigger-1",
     triggerHook: "0"
 })
-.addIndicators()
 .setPin(".main-background-text")
 .setTween(tl)
 .addTo(controller);
@@ -180,7 +184,6 @@ const scene2 = new ScrollMagic.Scene({
     triggerElement: ".trigger-2",
     triggerHook: "0"
 })
-.addIndicators()
 .setTween(tl2)
 .addTo(controller);
 
@@ -188,7 +191,6 @@ const scene3 = new ScrollMagic.Scene({
     triggerElement: ".trigger-3",
     triggerHook: "0"
 })
-.addIndicators()
 .setTween(tl3)
 .addTo(controller);
 
@@ -196,7 +198,6 @@ const scene4 = new ScrollMagic.Scene({
     triggerElement: ".trigger-4",
     triggerHook: "0"
 })
-.addIndicators()
 .setTween(tl4)
 .addTo(controller);
 
@@ -204,7 +205,6 @@ const scene5 = new ScrollMagic.Scene({
     triggerElement: ".trigger-5",
     triggerHook: "0"
 })
-.addIndicators()
 .setTween(tl5)
 .addTo(controller);
 
@@ -214,7 +214,6 @@ const timelineScene = new ScrollMagic.Scene({
     duration: "90%"
 })
 .setPin(".trigger-date")
-.addIndicators()
 .setTween(td1)
 .addTo(controller);
 
