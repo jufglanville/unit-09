@@ -1,20 +1,5 @@
 let width = screen.width;
 let height = screen.height;
-
-// Hamburger Menu Functions
-
-/* Set the width of the sidebar to 250px (show it) */
-function openNav() {
-    document.getElementById("mySidepanel").style.width = "250px";
-}
-  
-/* Set the width of the sidebar to 0 (hide it) */
-function closeNav() {
-    document.getElementById("mySidepanel").style.width = "0";
-}
-
-// Nav Function
-
 let docHeight = $(document).height();
 let homeAnchor = 0;
 let aboutAnchor = docHeight * 0.1;
@@ -22,38 +7,42 @@ let projectsAnchor = docHeight * 0.2;
 let timelineAnchor = docHeight * 0.3;
 let contactAnchor = docHeight;
 
+// Nav Bar Functions
+
+function openNav() {
+    document.getElementById("mySidepanel").style.width = "250px";
+}
+  
+function closeNav() {
+    document.getElementById("mySidepanel").style.width = "0";
+}
+
+function scrollTo(anchor) {
+    closeNav(),
+    $('html, body').animate({
+        scrollTop: anchor
+    }, 100);
+}
+
+// Nav Function
+
+// $(".home-link").click(scrollTo(homeAnchor));
+// $("#about-link").click(scrollTo(aboutAnchor));
+
 $(".home-link").click(function() {
-    closeNav(),
-    $('html, body').animate({
-        scrollTop: homeAnchor
-    }, 100);
+    scrollTo(homeAnchor)
 });
-
 $("#about-link").click(function() {
-    closeNav(),
-    $('html, body').animate({
-        scrollTop: aboutAnchor
-    }, 100);
+    scrollTo(aboutAnchor)
 });
-
 $("#projects-link").click(function() {
-    closeNav(),
-    $('html, body').animate({
-        scrollTop: projectsAnchor
-    }, 100);
+    scrollTo(projectsAnchor)
 });
-
 $("#timeline-link").click(function() {
-    closeNav(),
-    $('html, body').animate({
-        scrollTop: timelineAnchor
-    }, 100);
+    scrollTo(timelineAnchor)
 });
 $("#contact-link").click(function() {
-    closeNav(),
-    $('html, body').animate({
-        scrollTop: contactAnchor
-    }, 100);
+    scrollTo(contactAnchor)
 });
 
 $(".closebtn").click(closeNav);
